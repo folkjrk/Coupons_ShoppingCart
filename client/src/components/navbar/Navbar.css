@@ -1,0 +1,52 @@
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: 140px;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .button-navbar {
+    background-color: transparent;
+    border: 20px;
+    border-radius: 40px;
+    color: black;
+    font-size: 20px;
+    margin-right: 80px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.7s ease-in-out;
+  }
+  
+  .button-navbar:hover {
+    background-color: black;
+    color: #fffdfd;
+  }
+  
+  .button-navbar-cartIcon {
+    color: black;
+    cursor: pointer;
+  }
+  .button-navbar-cartIcon:hover {
+    border: 40px;
+    padding: 1px;
+    border-radius: 100px;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    cursor: pointer;
+  }

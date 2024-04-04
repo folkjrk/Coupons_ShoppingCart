@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "categories": "Clothing"
+    },
+    {
+        "id": "2",
+        "categories": "Accessories"
+    },
+    {
+        "id": "3",
+        "categories": "Electronics"
+    }
+]

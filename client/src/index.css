@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Karrik';
+  src: url('../public/font/Karrik-Regular.woff') format('woff');
+  font-weight: normal; 
+  font-style: normal; 
+  font-size: 15px; 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karrik';
+}
+.container{
+  width: 100%;
+  height: 100%;
+  padding: 0% ;
+  background-color: rgb(255, 255, 255);
+}

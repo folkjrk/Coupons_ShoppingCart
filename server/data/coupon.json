@@ -1,0 +1,54 @@
+[
+    {
+        "id": "1",
+        "campaigns": "Fixed amount",
+        "categories": "Coupon",
+        "description": "Discounts the entire cart by subtracting an amount from the total price",
+        "discount": 50,
+        "startDate": "2024-03-1",
+        "endDate": "2024-05-1",
+        "categoriesProduct": [1,2,3]
+    },
+    {
+        "id": "2",
+        "campaigns": "Percentage discount",
+        "categories": "Coupon",
+        "description": "Discounts the entire cart by subtracting a percentage from the total price",
+        "discount": 10,
+        "startDate": "2024-03-1",
+        "endDate": "2024-05-1",
+        "categoriesProduct": [1,2,3]
+    },
+    {
+        "id": "3",
+        "campaigns": "Percentage discount by item category",
+        "categories": "On Top",
+        "description": "Discount the entire amount of a specific category of items in cart",
+        "discount": 15,
+        "startDate": "2024-03-1",
+        "endDate": "2024-05-1",
+        "categoriesProduct": [1]
+    },
+    {
+        "id": "4",
+        "campaigns": "Discount by points",
+        "categories": "On Top",
+        "description": "Users spent points for a fixed amount of discount (1 point = 1 THB). The amount will be capped at 20% of total price",
+        "discount": 68,
+        "capped":20,
+        "startDate": "2024-03-1",
+        "endDate": "2024-05-1",
+        "categoriesProduct": [1,2,3]
+    },
+    {
+        "id": "5",
+        "campaigns": "Special campaigns",
+        "categories": "Seasonal",
+        "description": "From the total price, at every X THB, subtracting a fixed amount Y THB",
+        "every": 300,
+        "discount": 40,
+        "startDate": "2024-03-1",
+        "endDate": "2024-05-1",
+        "categoriesProduct": [1,2,3]
+    }
+]

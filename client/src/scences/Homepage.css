@@ -1,0 +1,26 @@
+.container-main{
+    width: 100vw;
+    height: auto;
+}
+ul li{  
+    text-align: left;  
+    margin-block: 20px;
+    font-size: 18px;
+}
+
+.container-top .container-top-left{
+    
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content:center
+}
+.container-top .container-top-right{
+  width: 60%;
+  display: flex;
+  /* justify-content:space-between */
+}
+
+.container-middle{
+  width: 100%;
+}
