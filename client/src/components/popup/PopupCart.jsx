@@ -56,6 +56,8 @@ function PopupCart({ trigger, setTrigger }) {
   };
 
   const calculateTotalPrice = (selectedProducts, selectedCoupons) => {
+  
+  try{
     let totalPrice = 0;
     
     for (const product of selectedProducts) {
@@ -109,6 +111,12 @@ function PopupCart({ trigger, setTrigger }) {
     }
   
     return totalPrice;
+  }
+  catch (error) {
+    console.error("An error occurred:", error);
+    return -1;
+  }
+
   };
 
   useEffect(() => {

@@ -7,7 +7,7 @@ const cors = require('cors');
 
 // Middleware
 app.use(cors({
-  origin: "http://localhost:5181", // Corrected origin URL // need to change to actual port
+  origin: "http://localhost:5173", // Corrected origin URL // need to change to actual port
   methods: ["GET", "POST"], 
 }));
 app.use(express.json());
