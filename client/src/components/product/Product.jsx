@@ -65,11 +65,11 @@ function Product() {
     }, [selectedProducts]);
 
     return (
-        <div>
+        <div className='container'>
             <div className='card-container'>
                 {products.map((product, index) => (
                     <div className='card' key={index}>
-                        <img className='card-image' src={product.image} alt='product' />
+                        <img className='card-image' src={`../../../public/images/${product.image}`} alt='product image' />
                         <div className='topic-card'>{product.name}</div>
                         <div className='description'>{product.description}</div>
                         <div className='price'>Price: {product.price} THB</div>
