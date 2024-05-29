@@ -28,12 +28,12 @@ function Product() {
                 actualPrice: PriceProduct,
                 price: PriceProduct
             };
-    
+
             setSelectedProducts(prevSelectedProducts => {
                 const updatedProducts = Array.isArray(prevSelectedProducts) ? [...prevSelectedProducts] : [];
-    
+
                 const existingProduct = updatedProducts.find(item => item.id === productId);
-    
+
                 if (existingProduct) {
                     updatedProducts.forEach(item => {
                         if (item.id === productId) {
@@ -41,21 +41,21 @@ function Product() {
                             item.price = item.productQuantity * PriceProduct;
                         }
                     });
-    
+
                     return updatedProducts;
                 } else {
                     updatedProducts.push(productToAdd);
                     return updatedProducts;
                 }
             });
-    
+
             toast.success(`${productName} added to cart successfully`, { className: "toast-message" });
         } catch (err) {
             console.log(err);
             toast.error('Error adding product to cart.', { className: 'toast-message' });
         }
     };
-    
+
     useEffect(() => {
         getProduct();
     }, []);
@@ -69,7 +69,12 @@ function Product() {
             <div className='card-container'>
                 {products.map((product, index) => (
                     <div className='card' key={index}>
-                        <img className='card-image' src={`../../../public/images/${product.image}`} alt='product image' />
+                        <img 
+                            className='card-image' 
+                            src={`../../../public/images/${product.image}`} 
+                            alt='product image' 
+                            loading="lazy" // Added lazy loading
+                        />
                         <div className='topic-card'>{product.name}</div>
                         <div className='description'>{product.description}</div>
                         <div className='price'>Price: {product.price} THB</div>

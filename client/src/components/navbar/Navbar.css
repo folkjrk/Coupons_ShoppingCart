@@ -3,22 +3,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 15px;
     color: white;
   }
   
-  .logo {
-    width: 100px;
-  }
+ .typewriter-container{
+  color: black;
+  font-family: 'Karrik';
+  font-size: 32px;
+ }
   
   ul {
     display: flex;
     list-style-type: none;
-    margin-right: 140px;
   }
   
   .nav-item {
-    margin-right: 20px;
+    margin-left: 20px;
   }
   
   .button-navbar {
@@ -27,7 +28,6 @@
     border-radius: 40px;
     color: black;
     font-size: 20px;
-    margin-right: 80px;
     cursor: pointer;
     padding: 10px;
     transition: background-color 0.7s ease-in-out;
@@ -41,6 +41,8 @@
   .button-navbar-cartIcon {
     color: black;
     cursor: pointer;
+    margin-left: 70px;
+    margin-right: 180px;
   }
   .button-navbar-cartIcon:hover {
     border: 40px;

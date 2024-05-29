@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import PopupCart from '../popup/PopupCart'
-
+import PopupCart from '../popup/PopupCart';
+import Typewriter from 'typewriter-effect';
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -11,8 +11,15 @@ const Navbar = () => {
 
     return (
         <div className='navbar'>
-            
-            <img src="" alt="" className='logo' />
+            <div className='typewriter-container'>
+                <Typewriter
+                    options={{
+                        strings: ['Logo'],
+                        autoStart: true,
+                        loop: true,
+                    }}
+                />
+            </div>
             <ul>
                 <li className='nav-item'>
                     <button className='button-navbar' onClick={() => navigate("/")}>Home</button>
@@ -28,11 +35,11 @@ const Navbar = () => {
                 </li>
                 <li className='nav-item'>
                     <ShoppingBasketIcon className='button-navbar-cartIcon' sx={{ fontSize: 40 }} onClick={() => setPopupOpen(true)} />
-                </li>       
-                <PopupCart trigger = {isPopupOpen} setTrigger= {setPopupOpen}/>
+                </li>
+                <PopupCart trigger={isPopupOpen} setTrigger={setPopupOpen} />
             </ul>
         </div>
-    )
-}
+    );
+};
 
 export default Navbar;
