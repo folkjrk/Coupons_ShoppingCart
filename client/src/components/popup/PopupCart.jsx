@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useSelectedProducts } from '../../SelectedProductsContext';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import CloseIcon from '@mui/icons-material/Close';
+import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import { pink } from '@mui/material/colors';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './PopupCart.css';
 import { toast } from 'react-toastify';
@@ -172,9 +173,14 @@ function PopupCart({ trigger, setTrigger }) {
             return (
               <div key={index} className='coupon-card'>
                 <div className="coupon-close" onClick={() => removeSelectedCoupon(coupon.id)}>
-                  <CloseIcon />
+                  <RemoveCircleIcon sx={{ color: pink[500] }} />
                 </div>
-                <p>{coupon.campaigns}</p>
+                <img 
+                            className='coupon-image' 
+                            src={`../../../public/images/coupons/${coupon.image}`} 
+                            alt='product image' 
+                            loading="lazy" // Added lazy loading
+                        />
               </div>
             );
           })}
